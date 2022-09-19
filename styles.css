@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 25px);
+}
+
+#canvas-grid-box {
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+}
