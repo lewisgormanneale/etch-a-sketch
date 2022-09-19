@@ -2,27 +2,67 @@ html {
     box-sizing: border-box;
     margin: 0;
     border: 0;
+    background-color: black;
 }
 
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+#title {
+    margin-left: 30px;
+    color: gold
+}
+
+#reset-button {
+    margin-right: 20px;
 }
 
 #main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: red;
+    width: 450px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10%;
 }
 
 #container {
     display: grid;
     grid-template-columns: repeat(16, 25px);
+    padding: 20px;
 }
 
-#canvas-grid-box {
+.canvas-grid-box {
     height: 25px;
     width: 25px;
-    border: 1px solid black;
+    border: 0.5px solid grey;
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
+
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.circle {
+    
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
