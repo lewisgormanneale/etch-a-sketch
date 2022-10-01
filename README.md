@@ -1,7 +1,7 @@
 # etch-a-sketch
 ## [Live Version](https://lewisgormanneale.github.io/etch-a-sketch/)
 
-##Description 
+## Description 
 
 This is an Etch A Sketch game created for the Odin Project's foundation Course. Lesson and project outlines can be found here: https://www.theodinproject.com/lessons/foundations-etch-a-sketch.
 
