@@ -112,3 +112,20 @@ header {
 footer {
     height: 50px;
 }
+
+@media screen and (max-width: 550px) {
+    #etch-a-sketch {
+        width: 80vw;
+    }
+    #container {
+        width: 70vw;
+        grid-template-columns: repeat(16, 15px);
+    }
+    #controls {
+        width: 70vw;
+    }
+    .canvas-grid-box {
+        height: 15px;
+        width: 15px;
+    }
+}
