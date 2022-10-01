@@ -1,25 +1,31 @@
 html {
     box-sizing: border-box;
-    margin: 0;
-    border: 0;
-    background-color: black;
 }
 
-#header {
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header, footer {
+    background-color: #b42325;
+    flex-shrink: 0;
+}
+
+header {
+    height: 80px;
+}
+
+#header-contents, #footer-contents {
+    margin-left: 30px;
+    margin-right: 30px;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
-    color: white;
-}
-
-#title {
-    margin-left: 30px;
-    color: gold
-}
-
-#reset-button {
-    margin-right: 20px;
 }
 
 #main {
@@ -27,11 +33,40 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    flex: 1 0 auto;
+    background-image: url("images/pencils.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#etch-a-sketch {
+    background-color: #b42325;
     width: 450px;
-    margin: auto;
+    margin: 80px auto 80px;
     padding: 30px;
     border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#etch-a-sketch h1 {
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: gold;
+    font-size: 0.8rem;
+}
+
+#etch-a-sketch h1 span {
+    font-style: italic;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 36px;
 }
 
 #container {
@@ -59,10 +94,21 @@ html {
     width: 350px;
 }
 
-.circle {
-    
-    background-color: white;
+#reset-button, #rainbow-button {
     border-radius: 50%;
-    width: 50px;
+    width: 70px;
+    height: 70px;
+    border: 3px dashed grey;
+    background-color: white;
+}
+
+#size-select {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: gold;
+}
+
+footer {
     height: 50px;
 }

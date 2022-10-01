@@ -8,20 +8,35 @@
 </head>
 <body>
     <header id="header">
-        <h1 id="title">Etch A Sketch</h1>
+        <div id="header-contents">
+            <h1 id="title">Etch A Sketch!</h1>
+            <p>Click and drag to draw on the screen.</p>
+        </div>
     </header>
     <main id="main">
-        <h1 id="title">Etch A Sketch</h1>
-            <div id="container">
+        <div id="etch-a-sketch">
+            <h1 id="logo">MAGIC <span>Etch A Sketch®</span> SCREEN</h1>
+            <div id="container"></div>
+            <div id="controls">
+                <button id="reset-button">Reset Canvas</button>
+                <div id="size-select">
+                    <label for="preset-size-options">Choose a canvas size:</label>
+                    <select name="preset-size-options" id="preset-size-options">
+                        <option>16 x 16</option>
+                        <option>16 x 16</option>
+                        <option>16 x 16</option>
+                        <option>16 x 16</option>
+                    </select>
+                    <button id="custom-size-option">Custom Value</button>
+                </div>
+                <button id="rainbow-button">Rainbow Mode</button>
             </div>
-        <div id="controls">
-            <div class="circle"></div>
-            <button id="reset-button">Reset Canvas</button>
-            <div class="circle"></div>
         </div>
     </main>
     <footer>
-
+        <div id="footer-contents">
+            <p>Background image by <a href="https://unsplash.com/@jessbaileydesigns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jess Bailey</a> on <a href="https://unsplash.com/s/photos/children-toys-art?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
