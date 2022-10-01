@@ -18,18 +18,17 @@
             <h1 id="logo">MAGIC <span>Etch A Sketch®</span> SCREEN</h1>
             <div id="container"></div>
             <div id="controls">
-                <button id="reset-button">Reset Canvas</button>
+                <button onclick="resetGrid()" id="reset-button">Reset Canvas</button>
                 <div id="size-select">
                     <label for="preset-size-options">Choose a canvas size:</label>
                     <select name="preset-size-options" id="preset-size-options">
-                        <option>16 x 16</option>
-                        <option>16 x 16</option>
-                        <option>16 x 16</option>
-                        <option>16 x 16</option>
+                        <option onchange="makeGrid(16)">16 x 16</option>
+                        <option onchange="makeGrid(32)">32 x 32</option>
+                        <option onchange="makeGrid(64)">64 x 64</option>
                     </select>
                     <button id="custom-size-option">Custom Value</button>
                 </div>
-                <button id="rainbow-button">Rainbow Mode</button>
+                <button onclick="toggleRainbowMode()" id="rainbow-button">Rainbow Mode</button>
             </div>
         </div>
     </main>

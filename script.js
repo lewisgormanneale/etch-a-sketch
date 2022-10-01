@@ -4,16 +4,18 @@ const startSize = 16;
 let currentColor = startColor;
 let currentSize = startSize;
 
-const container = document.querySelector('#container');
 let rainbowMode = false;
+
+const container = document.querySelector('#container');
+container.style.backgroundColor = startColor;
 
 function makeGrid(size) {
     for (let i = 0; i < (size * size); i++) {
-        const div = document.createElement('div');
-        div.classList.add('canvas-grid-box');
-        container.appendChild(div);
-        gridBoxes = document.querySelectorAll('#container > div');
-        gridBoxes[i].addEventListener('click', fillIn);
+        let gridBox = document.createElement('div');
+        container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+        container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+        gridBox.classList.add('canvas-grid-box');
+        container.appendChild(gridBox);
     };
 };
 
@@ -24,17 +26,23 @@ function pickRainbowColor() {
 };
 
 function fillIn() {
-    let fillColor = '#000000';
-    if (rainbowMode = true) {
-        fillColor = pickRainbowColor();
-    }
-    let col = document.getElementById
-    gridBoxes.style.backgroundColor = fillColor;
-    console.log(fillColor);
+    document.getElementById('container').style.backgroundColor = currentColor;
 }
 
 function resetGrid() {
+    let elements = document.getElementsByClassName('canvas-grid-box');
+    while (elements.length > 0) elements[0].remove();
+    currentColor = startColor;
+    makeGrid(currentSize);
+}
 
+function toggleRainbowMode() {
+    rainbowMode = !rainbowMode;
+    console.log("Rainbow")
 }
 
 window.addEventListener('load', makeGrid(16));
+
+/* 
+        gridBoxes = document.querySelectorAll('#container > div');
+        gridBoxes[i].addEventListener('click', fillIn(currentColor)); */

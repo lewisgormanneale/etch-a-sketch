@@ -71,13 +71,13 @@ header {
 
 #container {
     display: grid;
-    grid-template-columns: repeat(16, 25px);
-    padding: 20px;
+    width: 400px;
+    height: 400px;
+    margin: 20px auto 40px;
 }
-
 .canvas-grid-box {
-    height: 25px;
-    width: 25px;
+    height: auto;
+    width: auto;
     border: 0.5px solid grey;
     background-color: white;
 }
@@ -118,14 +118,10 @@ footer {
         width: 80vw;
     }
     #container {
-        width: 70vw;
-        grid-template-columns: repeat(16, 15px);
+        width: 300px;
+        height: 300px;
     }
     #controls {
         width: 70vw;
-    }
-    .canvas-grid-box {
-        height: 15px;
-        width: 15px;
     }
 }
