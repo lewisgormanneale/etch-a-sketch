@@ -75,11 +75,16 @@ header {
     height: 400px;
     margin: 20px auto 40px;
 }
+
 .canvas-grid-box {
     height: auto;
     width: auto;
     border: 0.5px solid grey;
     background-color: white;
+}
+
+.canvas-grid-box:hover {
+    background-color: black;
 }
 
 .black {

@@ -1,20 +1,22 @@
-const startColor = '#FFFFFF'
+const startColor = '#000000'
 const startSize = 16;
 
 let currentColor = startColor;
 let currentSize = startSize;
-
 let rainbowMode = false;
 
 const container = document.querySelector('#container');
 container.style.backgroundColor = startColor;
 
 function makeGrid(size) {
+    let elements = document.getElementsByClassName('canvas-grid-box');
+    while (elements.length > 0) elements[0].remove();
     for (let i = 0; i < (size * size); i++) {
         let gridBox = document.createElement('div');
         container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
         container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
         gridBox.classList.add('canvas-grid-box');
+        gridBox.addEventListener('mouseover', fillIn);
         container.appendChild(gridBox);
     };
 };
@@ -26,7 +28,12 @@ function pickRainbowColor() {
 };
 
 function fillIn() {
-    document.getElementById('container').style.backgroundColor = currentColor;
+    let self = this;
+    if (rainbowMode === true) {
+        currentColor = pickRainbowColor();
+    }
+    self.style.backgroundColor = currentColor;
+    console.log('hi')
 }
 
 function resetGrid() {
@@ -38,10 +45,10 @@ function resetGrid() {
 
 function toggleRainbowMode() {
     rainbowMode = !rainbowMode;
-    console.log("Rainbow")
+    currentColor = '#000000'
 }
 
-window.addEventListener('load', makeGrid(16));
+window.addEventListener('load', makeGrid(startSize));
 
 /* 
         gridBoxes = document.querySelectorAll('#container > div');
