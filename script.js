@@ -1,8 +1,9 @@
 const startColor = '#000000'
 const startSize = 16;
 
-let currentColor = startColor;
+let input = document.querySelector('input');
 let currentSize = startSize;
+let currentColor = startColor;
 let rainbowMode = false;
 
 const container = document.querySelector('#container');
@@ -33,20 +34,27 @@ function fillIn() {
         currentColor = pickRainbowColor();
     }
     self.style.backgroundColor = currentColor;
-    console.log('hi')
-}
+};
 
 function resetGrid() {
     let elements = document.getElementsByClassName('canvas-grid-box');
     while (elements.length > 0) elements[0].remove();
     currentColor = startColor;
     makeGrid(currentSize);
-}
+};
 
 function toggleRainbowMode() {
     rainbowMode = !rainbowMode;
     currentColor = '#000000'
 }
+
+let inputValue = input.value;
+console.log(inputValue);
+input.addEventListener('input', function(){
+    inputValue = this.value;
+    currentSize = inputValue;
+    console.log(inputValue);
+},0);
 
 window.addEventListener('load', makeGrid(startSize));
 
